@@ -1,0 +1,30 @@
+/* Colores ======================================================================= */
+
+/* fondo nav y títulos en contraste */
+$color-nav-tcontraste: #FFFFFF 100%; 
+/* menú expandible */
+$color-mexp: #0000EC 100%; 
+/* fondo botones y hover menú */
+$color-bot-hm: #00F3BB 100%; 
+/* hover botones */
+$color-hbot: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); 
+/* fondos con skew */
+$color-skew: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+/* texto general */
+$color-texto: #060A24 100%;
+
+/* ======================================================================= */
+
+/* Fuentes ======================================================================= */
+
+/* Menú y párrafos */
+$fuente-myp: 'IBMPlexMono', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* Botones y hover menú */
+$fuente-botyhm: 'IBMPlexMono-Medium', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* Títulos (h1) */
+$fuente-titulos: 'IBMPlexSans', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* Pié de img Temas (figcaption) */
+$fuente-pieimg: 'IBMPlexSans-SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+/* ======================================================================= */
+

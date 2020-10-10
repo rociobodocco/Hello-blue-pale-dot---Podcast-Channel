@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import 'variables';
+@import 'responsive';
+@import 'cabecera';
+@import 'principal';
+
+/* Fuentes ======================================================================= */
+
+/* Menú y párrafos */
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url(./fuentes/IBMPlexMono-Regular.ttf)
+}
+
+/* Botones y hover menú */
+@font-face {
+    font-family: 'IBMPlexMono-Medium';
+    src: url(./fuentes/IBMPlexMono-Medium.ttf)
+}
+
+/* Títulos (h1) */
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url(./fuentes/IBMPlexSans-Regular.ttf)
+}
+
+/* Pié de img Temas (figcaption) */
+@font-face {
+    font-family: 'IBMPlexSans-SemiBold';
+    src: url(./fuentes/IBMPlexSans-SemiBold.ttf)
+}
+
+/* ======================================================================= */
