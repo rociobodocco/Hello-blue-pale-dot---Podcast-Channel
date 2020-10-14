@@ -33,36 +33,30 @@ header {
   align-items: center;
   width: 100vw;
   padding: 0.75em; }
-  header nav {
-    /*ver como hacer que aparezca luego del click en menu*/ }
-    header nav .btnmenu {
-      font-size: 1.125em;
-      margin-right: 1em; }
-    header nav ul {
-      display: none;
-      position: absolute;
-      right: 0%;
-      top: 7vh;
-      width: 100vw;
-      padding: 0.5em;
-      height: 27vh;
-      background-color: #0000EC; }
-      header nav ul li {
-        font-family: "IBMPlexMono", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        font-size: 1em;
-        letter-spacing: 0;
-        list-style: none;
-        line-height: 6vh;
-        color: #FFFFFF; }
-    header nav:hover ul {
-      display: block; }
-    header nav .btncruz {
-      display: none;
-      font-size: 1.125em;
-      margin-right: 1em; }
+  header nav .btnmenu {
+    font-size: 1.125em;
+    margin-right: 1em; }
+  header nav ul {
+    display: none;
+    position: absolute;
+    right: 0%;
+    top: 7vh;
+    width: 100vw;
+    padding: 0.5em;
+    height: 27vh;
+    background-color: #0000EC; }
+    header nav ul li {
+      font-family: "IBMPlexMono", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 1em;
+      letter-spacing: 0;
+      list-style: none;
+      line-height: 6vh;
+      color: #FFFFFF; }
+  header nav:hover ul {
+    display: block; }
 
 /*hovers gradient y menú open cruz*/
-h1 {
+h1, h2 {
   font-family: "IBMPlexSans", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2.25em;
   letter-spacing: 0;
@@ -127,7 +121,7 @@ main .historia {
     z-index: 99; }
   main .historia .artsec3 {
     padding: 0.75em; }
-    main .historia .artsec3 h1 {
+    main .historia .artsec3 h2 {
       line-height: 7vh; }
     main .historia .artsec3 p {
       padding: 0.5em 0;
@@ -137,7 +131,7 @@ main .invitados {
   flex-direction: column; }
   main .invitados .tsec4 {
     padding: 0.75em; }
-    main .invitados .tsec4 h1 {
+    main .invitados .tsec4 h2 {
       padding: 0.5em 0 0 0;
       line-height: 7vh; }
   main .invitados .f1, main .invitados .f2, main .invitados .f3, main .invitados .f4, main .invitados .f5, main .invitados .f6 {
@@ -150,7 +144,7 @@ main .temas {
   height: 170vh; }
   main .temas .tsec5 {
     padding: 0.75em; }
-    main .temas .tsec5 h1 {
+    main .temas .tsec5 h2 {
       padding: 1em 0 0 0;
       line-height: 7vh; }
   main .temas .fig1, main .temas .fig2, main .temas .fig3, main .temas .fig4 {
@@ -166,7 +160,7 @@ main .novedades {
   height: 62vh; }
   main .novedades .tsec6 {
     padding: 0.75em; }
-    main .novedades .tsec6 h1 {
+    main .novedades .tsec6 h2 {
       line-height: 7vh;
       text-align: center;
       color: #FFFFFF; }
