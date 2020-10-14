@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  max-width: 100vw; }
 
 /* Colores ======================================================================= */
 /* fondo nav y títulos en contraste */
@@ -24,36 +25,175 @@
    ------------------------------------------------------------------------- */
 /* Escritorios muy anchos
    ------------------------------------------------------------------------- */
-header nav ul li {
-  font-family: "IBMPlexMono", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1em;
-  color: #060A24 100%;
-  letter-spacing: 0;
-  line-height: 1.75em; }
+/*armar responsive*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 0.75em; }
+  header nav {
+    /*ver como hacer que aparezca luego del click en menu*/ }
+    header nav .btnmenu {
+      font-size: 1.125em;
+      margin-right: 1em; }
+    header nav ul {
+      display: none;
+      position: absolute;
+      right: 0%;
+      top: 7vh;
+      width: 100vw;
+      padding: 0.5em;
+      height: 27vh;
+      background-color: #0000EC; }
+      header nav ul li {
+        font-family: "IBMPlexMono", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 1em;
+        letter-spacing: 0;
+        list-style: none;
+        line-height: 6vh;
+        color: #FFFFFF; }
+    header nav:hover ul {
+      display: block; }
+    header nav .btncruz {
+      display: none;
+      font-size: 1.125em;
+      margin-right: 1em; }
 
-body {
-  max-width: 100% vw; }
-
+/*hovers gradient y menú open cruz*/
 h1 {
   font-family: "IBMPlexSans", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2.25em;
   letter-spacing: 0;
-  line-height: 2.625em; }
+  line-height: 2.625em;
+  font-weight: lighter; }
 
 p {
   font-family: "IBMPlexMono", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 0.875em;
-  color: #060A24 100%;
+  color: #060A24;
   letter-spacing: 0;
   line-height: 1.375em; }
 
 figcaption {
   font-family: "IBMPlexSans-SemiBold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 24px;
-  color: #060A24 100%;
+  font-size: 1.5em;
+  color: #060A24;
   letter-spacing: 0;
   text-align: center; }
 
+main .conocemas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75em;
+  width: 100vw;
+  height: 46vh; }
+  main .conocemas .presentacion h1 {
+    line-height: 7vh; }
+  main .conocemas .presentacion span {
+    text-decoration: line-through; }
+  main .conocemas .presentacion p {
+    padding: 1em 0;
+    line-height: 4vh; }
+  main .conocemas .masinfo {
+    height: 8vh;
+    background-color: #00F3BB;
+    font-family: IBMPlexMono-Medium;
+    font-size: 1.125em;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+    border: none; }
+main .episodios {
+  margin-top: 3vh;
+  padding: 0.75em;
+  clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+  width: 100vw;
+  height: 215vh;
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
+  main .episodios .tsec2 {
+    margin-top: 3vh;
+    color: #FFFFFF; }
+  main .episodios .p1, main .episodios .p2, main .episodios .p3, main .episodios .p4 {
+    padding: 0.25em 0; }
+main .historia {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 145vh; }
+  main .historia .phone {
+    z-index: 99; }
+  main .historia .artsec3 {
+    padding: 0.75em; }
+    main .historia .artsec3 h1 {
+      line-height: 7vh; }
+    main .historia .artsec3 p {
+      padding: 0.5em 0;
+      line-height: 4vh; }
+main .invitados {
+  display: flex;
+  flex-direction: column; }
+  main .invitados .tsec4 {
+    padding: 0.75em; }
+    main .invitados .tsec4 h1 {
+      padding: 0.5em 0 0 0;
+      line-height: 7vh; }
+  main .invitados .f1, main .invitados .f2, main .invitados .f3, main .invitados .f4, main .invitados .f5, main .invitados .f6 {
+    /*como quitar espacios entre fotos*/ }
+main .temas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 170vh; }
+  main .temas .tsec5 {
+    padding: 0.75em; }
+    main .temas .tsec5 h1 {
+      padding: 1em 0 0 0;
+      line-height: 7vh; }
+  main .temas .fig1, main .temas .fig2, main .temas .fig3, main .temas .fig4 {
+    text-align: center;
+    padding: 1.5em; }
+main .novedades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  height: 62vh; }
+  main .novedades .tsec6 {
+    padding: 0.75em; }
+    main .novedades .tsec6 h1 {
+      line-height: 7vh;
+      text-align: center;
+      color: #FFFFFF; }
+  main .novedades .masepisodios {
+    height: 8vh;
+    width: 90vw;
+    background-color: #00F3BB;
+    font-family: IBMPlexMono-Medium;
+    font-size: 1.125em;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+    border: none; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh; }
+  footer .redes {
+    display: flex;
+    justify-content: space-around;
+    width: 80vw; }
+
+/*espaciado entre img quitar*/
+/*hovers y animations*/
 /* Fuentes ======================================================================= */
 /* Menú y párrafos */
 @font-face {

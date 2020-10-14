@@ -1,19 +1,50 @@
 
 header {
-    .logo {
-        .imglogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0.75em;
 
-        } 
-    }
     nav {
+
+        .btnmenu {
+            font-size: 1.125em;
+            margin-right: 1em;
+        }
+
         ul {
+            display: none;
+            position: absolute;
+            right: 0%;
+            top: 7vh;
+            width: 100vw;
+            padding: 0.5em;
+            height: 27vh;
+            background-color: $color-mexp;
+
             li {
                 font-family: $fuente-myp;
                 font-size: 1em;
-                color: $color-texto;
                 letter-spacing: 0;
-                line-height: 1.75em;
+                list-style: none;
+                line-height: 6vh;
+                color: $color-contraste;
             }
         }
+        
+        &:hover ul{
+            display: block;
+        }
+
+        .btncruz {
+             display: none;
+             font-size: 1.125em;
+             margin-right: 1em;
+        } /*ver como hacer que aparezca luego del click en menu*/
     }
 }
+
+
+/*hovers gradient y menú open cruz*/

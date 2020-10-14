@@ -1,12 +1,11 @@
-body {
-    max-width: 100%vw;
-}
+
 
 h1 {
     font-family: $fuente-titulos;
     font-size: 2.25em;
     letter-spacing: 0;
     line-height: 2.625em;
+    font-weight: lighter;
 }
 
 p {
@@ -19,7 +18,7 @@ p {
 
 figcaption {
     font-family: $fuente-pieimg;
-    font-size: 24px;
+    font-size: 1.5em;
     color: $color-texto;
     letter-spacing: 0;
     text-align: center;
@@ -28,129 +27,170 @@ figcaption {
 main {
 
     .conocemas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.75em;
+        width: 100vw;
+        height: 46vh;
 
         .presentacion {
 
-            .world {
+            h1 {
+                line-height: 7vh;
+            }
+        
+                
+            span {
+                text-decoration: line-through;
+            }
 
+            p {
+                padding: 1em 0;
+                line-height: 4vh;
             }
         }
 
         .masinfo {
-
+            height: 8vh;
+            background-color: $color-bot-hm;
+            font-family: IBMPlexMono-Medium;
+            font-size: 1.125em;
+            color: $color-texto;
+            letter-spacing: 0;
+            text-align: center;
+            border: none;
         }
     }
 
     .episodios {
+        margin-top: 3vh;
+        padding: 0.75em;
+        clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+        width: 100vw;
+        height: 215vh;
+        background-image: $color-skew;            
 
         .tsec2 {
-
+            margin-top: 3vh;
+            color: $color-contraste;
         }
 
-        .p1 {
-
-        }
-
-        .p2 {
-
-        }
-
-        .p3 {
-
-        }
-
-        .p4 {
-
+        .p1, .p2, .p3, .p4 {
+            padding: 0.25em 0;
         }
     }
 
     .historia {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 145vh;
 
         .phone {
-
-            img {
-
-            }
+            z-index: 99;
         }
 
         .artsec3 {
+            padding: 0.75em;
 
+            h1 {
+                line-height: 7vh;
+            }
+
+            p {
+                padding: 0.5em 0;
+                line-height: 4vh;
+            }
         }
     }
 
     .invitados {
+        display: flex;
+        flex-direction: column;
 
         .tsec4 {
+            padding: 0.75em;
 
+            h1 {
+                padding: 0.5em 0 0 0;
+                line-height: 7vh;
+            }
         }
 
-        .f1 {
-
-        }
-
-        .f2 {
-
-        }
-
-        .f3 {
-
-        }
-
-        .f4 {
-
-        }
-
-        .f5 {
-
-        }
-
-        .f6 {
-
+        .f1, .f2, .f3, .f4, .f5, .f6 {
+            /*como quitar espacios entre fotos*/
         }
     }
 
     .temas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 170vh;
 
         .tsec5 {
+            padding: 0.75em;
 
+            h1 {
+                padding: 1em 0 0 0;
+                line-height: 7vh;
+            }
         }
 
-        .fig1 {
-
-        }
-
-        .fig2 {
-            
-        }
-
-        .fig3 {
-            
-        }
-
-        .fig4 {
-            
+        .fig1, .fig2, .fig3, .fig4 {
+            text-align: center;
+            padding: 1.5em;
         }
     }
 
     .novedades {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+        background-image: $color-skew;
+        height: 62vh;
 
         .tsec6 {
+            padding: 0.75em;
 
+            h1 {
+                line-height: 7vh;
+                text-align: center;
+                color: $color-contraste;
+            }
         }
 
         .masepisodios {
-
+            height: 8vh;
+            width: 90vw;
+            background-color: $color-bot-hm;
+            font-family: IBMPlexMono-Medium;
+            font-size: 1.125em;
+            color: $color-texto;
+            letter-spacing: 0;
+            text-align: center;
+            border: none;
         }
     }
 }
 
 footer {
-
-    .pie {
-
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
 
     .redes {
-        
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
     }
 }
+
+/*espaciado entre img quitar*/
+/*hovers y animations*/
