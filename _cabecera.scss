@@ -1,7 +1,6 @@
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
@@ -9,9 +8,29 @@ header {
 
     nav {
 
-        .btnmenu {
+        input {
+            display: none;
             font-size: 1.125em;
             margin-right: 1em;
+        }
+        .open {
+            display: block;
+        }
+          
+        .close {
+            display: none;
+        }
+          
+        input:checked ~ .open {
+            display: none;
+        }
+        
+        input:checked ~ .close {
+            display: block;
+        }
+
+        input:checked ~ ul {
+            display: block;
         }
 
         ul {
@@ -25,20 +44,57 @@ header {
             background-color: $color-mexp;
 
             li {
-                font-family: $fuente-myp;
-                font-size: 1em;
-                letter-spacing: 0;
                 list-style: none;
                 line-height: 6vh;
-                color: $color-contraste;
+
+                a {
+                    font-family: $fuente-myp;
+                    font-size: 1em;
+                    letter-spacing: 0;
+                    color: $color-contraste;
+                    text-decoration: none;
+                }
             }
-        }
-        
-        &:hover ul{
-            display: block;
         }
     }
 }
 
 
-/*hovers gradient y menú open cruz*/
+/*animaciones*/
+
+
+@media screen and (min-width: 768px) { 
+    header {
+
+        .logo {
+            margin-left: 4em;
+        }
+
+        nav {
+
+            .mh, .x {
+                display: none;
+            }
+
+            ul {
+                display: inline-block;
+                position: relative;
+                top: 0;
+                width: auto;
+                height: auto;
+                padding: 0;
+                background: none;
+
+                li {
+                    display: inline-block;
+                    padding: 0 1em;
+                
+                    a {
+                        color: $color-texto;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+} 

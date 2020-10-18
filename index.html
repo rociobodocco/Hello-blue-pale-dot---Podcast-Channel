@@ -17,55 +17,50 @@
             <img class="imglogo" src="./imagenes/logo.svg" alt="bluedot">
         </div>
         <nav>
-            <i id="menu" class="fas fa-bars btnmenu"></i>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="open"> <i class="fas fa-bars mh"></i> </label>
+            <label for="menu" class="close"> <i class="fas fa-times x"></i></label>
             <ul>
-                <li>EPISODIOS</li> <!--ver si hay que agregar link a secciones (no son las mimas-->
-                <li>NOSOTROS</li>
-                <li>ENTREVISTAS</li>
-                <li>TÓPICOS</li>
+                <li><a href="#secepisodios">EPISODIOS</a></li>
+                <li><a href="#secnosotros">NOSOTROS</a></li>
+                <li><a href="#secentrevistas">ENTREVISTAS</a></li>
+                <li><a href="#sectopicos">TÓPICOS</a></li>
             </ul>
-            
         </nav>
     </header>
     <!-- cuerpo principal de pág. -->
     <main>
+
         <!-- 1º sección -->
         <section class="conocemas">
             <article class="presentacion">
-                <h1>Hello <span>world</span></h1>
-                <h1>pale blue dot.</h1>
+                <h1>Hello <span class="span1">world</span> pale blue dot<span class="span2">.</span></h1>
                 <p>Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.
                 </p>
             </article>
             <button class="masinfo">CONOCÉ MÁS</button>
         </section>
+
         <!-- 2º sección -->
         <section class="episodios">
-            <div class="contenedor">
-                <div class="tsec2">
-                    <h2>Episodios</h2>
-                </div>
-                <div class="p1">
-                    <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" width="100%"
-                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-                <div class="p2">
-                    <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" width="100%"
-                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-                <div class="p3">
-                    <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="100%"
-                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-                <div class="p4">
-                    <iframe src="https://open.spotify.com/embed-podcast/episode/5mddqHiI96V0ZMdMidn3WW" width="100%"
-                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
+            <div class="tsec2">
+                <h2 id="secepisodios">Episodios</h2>
+            </div>
+            <div class="spotify">
+                <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </section>
+
         <!-- 3º sección -->
         <section class="historia">
-            <div class="phone">
+            <div class="phone" id="secnosotros">
                 <img src="./imagenes/phone.png" alt="The Secret History of Women in Coding">
             </div>
             <article class="artsec3">
@@ -76,54 +71,46 @@
                     astness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
             </article>
         </section>
+
         <!-- 4º sección -->
         <section class="invitados">
             <div class="tsec4">
-                <h2>Invitadas/os estelares</h2>
+                <h2 id="secentrevistas">Invitadas/os estelares</h2>
             </div>
-            <div class="f1">
+            <div class="fotos">
                 <img src="./imagenes/grace-hopper.png" alt="Grace Hopper">
-            </div>
-            <div class="f2">
                 <img src="./imagenes/Katie-Bouman.png" alt="Katie Bouman">
-            </div>
-            <div class="f3">
                 <img src="./imagenes/Margaret_Hamilton.png" alt="Margaret Hamilton">
-            </div>
-            <div class="f4">
-                <img src="./imagenes/E.R.A.Univac.png"
-                    alt="E.R.A.Univac 1103 computer in the 1950s">
-            </div>
-            <div class="f5">
+                <img src="./imagenes/E.R.A.Univac.png" alt="E.R.A.Univac 1103 computer in the 1950s">
                 <img src="./imagenes/Computer-operators-with-an-Eniac.png"
                     alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer">
-            </div>
-            <div class="f6">
                 <img src="./imagenes/susan-kare.png" alt="Susan Kare">
             </div>
         </section>
+
         <!-- 5º sección -->
         <section class="temas">
             <div class="tsec5">
-                <h2>Algunos de nuestros temas</h2>
+                <h2 id="sectopicos">Algunos de nuestros temas</h2>
             </div>
-            <figure class="fig1">
+            <figure class="topicos">
                 <img src="./imagenes/icon1.svg" alt="Trabajo remoto">
                 <figcaption>Trabajo remoto</figcaption>
             </figure>
-            <figure class="fig2">
+            <figure class="topicos">
                 <img src="./imagenes/icon2.svg" alt="Repensando la programación">
                 <figcaption>Repensando la programación</figcaption>
             </figure>
-            <figure class="fig3">
+            <figure class="topicos">
                 <img src="./imagenes/icon3.svg" alt="Bases del código">
                 <figcaption>Bases del código</figcaption>
             </figure>
-            <figure class="fig4">
+            <figure class="topicos">
                 <img src="./imagenes/icon4.svg" alt="Seguridad informática">
                 <figcaption>Seguridad informática</figcaption>
             </figure>
         </section>
+
         <!-- 6º sección -->
         <section class="novedades">
             <div class="tsec6">
@@ -131,7 +118,9 @@
             </div>
             <button class="masepisodios">ESCUCHÁ LOS EPISODIOS</button>
         </section>
+
     </main>
+
     <!-- Pié de pág con redes -->
     <footer>
         <div class="pie">
