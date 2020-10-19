@@ -88,7 +88,7 @@ main {
         height: 145vh;
 
         .phone {
-            z-index: 99;
+            z-index: 90;
         }
 
         .artsec3 {
@@ -129,23 +129,27 @@ main {
     .temas {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
-        height: 170vh;
+        height: 148vh;
 
         .tsec5 {
-            padding: 0.75em;
+            padding: 0 0.75em;
 
             h2 {
-                padding: 1em 0 0 0;
                 line-height: 7vh;
             }
         }
 
-        .topicos {
-            text-align: center;
-            padding: 1.5em;
+        .cont-topicos {
+
+            .topicos {
+                text-align: center;
+                padding: 1.5em 1em;
+            }
         }
+
+        
     }
 
     .novedades {
@@ -263,22 +267,26 @@ footer {
 
         .historia {
             flex-direction: row;
-            justify-content: space-evenly;
-            height: 115vh;
+            height: 65vh;
 
-            .phone { //ver como superponer con episodios
-                top: 0;
+            .phone {
+                position: absolute;
+                top: 195vh;
+                margin-right: 50vw;
+                align-self: flex-start;
                 width: auto;
 
                 img {
                     width: 40vw;
-                    height: 100vh;
+                    height: 95vh;
                 }
             }
 
             .artsec3 {
                 width: 43vw;
-                
+                height: max-content;
+                margin-right: 5vw;
+                padding: 1em 2em;
 
                 h2 {
                     line-height: 12vh;
@@ -286,101 +294,105 @@ footer {
                 }
 
                 p {
-                    font-size: 0.95em;
+                    font-size: 0.80em;
                     padding: 0.2em 0;
                 }
             }
         }
 
         .invitados {
-            display: flex;
-            flex-direction: column;
 
             .tsec4 {
-                padding: 0.75em;
+                margin-left: 7em;
+                margin-top: 13vh;
+                font-size: 1.20em;
 
                 h2 {
-                    padding: 0.5em 0 0 0;
-                    line-height: 7vh;
+                    padding: 0.6em 0;
                 }
             }
 
             .fotos {
+                display: grid;
+                grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 
                 img {
-                    display: block;
-                    width: 100vw;
-                    height: auto;
+                    width: 33.33vw;
+                    height: 46vh;
                 }
             }
         }
 
         .temas {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            height: 170vh;
+            height: 60vh;
 
             .tsec5 {
-                padding: 0.75em;
+                align-self: flex-start;
+                padding: 0.5em 0;
+                margin-left: 7em;
+                font-size: 1.20em;
 
                 h2 {
-                    padding: 1em 0 0 0;
-                    line-height: 7vh;
+                    
                 }
             }
 
-            .topicos {
-                text-align: center;
-                padding: 1.5em;
+            .cont-topicos {
+                display: flex;
+                width: 80vw;
+
+                .topicos {
+
+                    figcaption {
+                        width: 19vw;
+                        padding: 0.2em 0;
+                    }
+                }
             }
+
         }
 
         .novedades {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-            background-image: $color-skew;
-            height: 62vh;
+            justify-content: center;
+            clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
 
+            
             .tsec6 {
-                padding: 0.75em;
-
-                h2 {
-                    line-height: 7vh;
-                    text-align: center;
-                    color: $color-contraste;
-                }
+                padding: 2em;
+                font-size: 1.20em;
             }
 
             .masepisodios {
-                height: 8vh;
-                width: 90vw;
-                background-color: $color-bot-hm;
-                font-family: IBMPlexMono-Medium;
-                font-size: 1.125em;
-                color: $color-texto;
-                letter-spacing: 0;
-                text-align: center;
-                border: none;
+                width: 30vw;
             }
         }
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 20vh;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10vh;
+        padding: 0 3em;
 
         .redes {
-            display: flex;
-            justify-content: space-around;
-            width: 80vw;
+            justify-content: space-evenly;
+            width: 30vw;
         }
     }
 } 
+
+
+ 
+// /* Tablets en horizonal y escritorios normales
+//    ------------------------------------------------------------------------- */
+// @media screen and (min-width: 1024px) { 
+
+// }
+ 
+// /* Escritorios muy anchos
+//    ------------------------------------------------------------------------- */
+// @media screen and (min-width: 1200px) { 
+
+// }
+
+
