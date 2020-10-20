@@ -54,6 +54,12 @@ header {
                     color: $color-contraste;
                     text-decoration: none;
                 }
+                
+                a:active {
+                    text-decoration: line-through;
+                    color: $color-bot-hm;
+                }
+
             }
         }
     }
@@ -96,6 +102,16 @@ header {
                     a {
                         color: $color-texto;
                         font-size: 0.9em;
+                    }
+
+                    a:hover {
+                        text-decoration: line-through;
+                        color: $color-bot-hm;
+                    }
+    
+                    a:active {
+                        text-decoration: line-through;
+                        color: #060a248c;
                     }
                 }
             }

@@ -68,7 +68,7 @@ main {
         padding: 0.75em;
         clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
         width: 100vw;
-        height: 215vh;
+        height: 240vh;
         background-image: $color-skew;            
 
         .tsec2 {
@@ -85,10 +85,16 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 145vh;
+        height: 160vh;
 
         .phone {
             z-index: 90;
+            transform: translateY(-2vh);
+
+            img {
+                width: auto;
+                height: 111vh;
+            }
         }
 
         .artsec3 {
@@ -108,6 +114,7 @@ main {
     .invitados {
         display: flex;
         flex-direction: column;
+        height: max-content;
 
         .tsec4 {
             padding: 0.75em;
@@ -166,6 +173,7 @@ main {
         clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
         background-image: $color-skew;
         height: 62vh;
+        width: 100vw;
 
         .tsec6 {
             padding: 0.75em;
@@ -240,14 +248,18 @@ footer {
                 width: 20vw;
                 font-size: 1em;
             }
+
+            .masinfo:hover {
+                background: $color-hbot;
+            }
         }
 
         .episodios {
             display: flex;
             flex-direction: column;
             clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-            height: 140vh;
             margin-top: 0;
+            height: 170vh;
 
             .tsec2 {
                 margin-left: 7em;
@@ -275,13 +287,13 @@ footer {
 
             .phone {
                 position: absolute;
-                top: 190vh;
+                transform: translateY(-20vh);
                 margin-right: 50vw;
                 align-self: flex-start;
                 width: auto;
 
                 img {
-                    width: 40vw;
+                    width: auto;
                     height: 95vh;
                 }
             }
@@ -365,6 +377,10 @@ footer {
             .masepisodios {
                 width: 30vw;
             }
+
+            .masepisodios:hover {
+                background: $color-hbot;
+            }
         }
     }
 
@@ -430,7 +446,7 @@ footer {
             height: 80vh;
 
             .phone {
-
+                transform: translateY(5vh);
                 img {
                     width: 35vw;
                     height: 111vh;
@@ -498,85 +514,46 @@ footer {
     main {
 
         .episodios {
-            height: 170vh;
-            align-content: center;
+            height: 180vh;
             clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
 
             .tsec2 {
-                font-size: 1.34em;
-            }
 
-            .spotify {
-
-                iframe {
-                    width: 45vw;
+                h2 {
+                    padding: 1.5em 0 0 0;
                 }
             }
         }
 
         .historia {
-            height: 80vh;
+            height: 70vh;
 
             .phone {
+                top: 215vh;
 
                 img {
-                    width: 35vw;
-                    height: 111vh;
-                }
-            }
-
-            .artsec3 {
-                width: 44vw;
-
-                h2 {
-                    font-size: 3em;
-                }
-
-                p {
-                    font-size: 1em;
+                    width: 32vw;
                 }
             }
         }
 
         .invitados {
 
-            .tsec4 {
-                font-size: 1.34em;
+            .fotos {
+                
+                img {
+                    width: 33.33vw;
+                    height: 54vh;
+                }
             }
         }
 
         .temas {
+            height: 70vh;
 
             .tsec5 {
-                font-size: 1.34em;
-            }
-        }
-
-        .novedades {
-            height: 70vh;
-            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
-        }
-
-        .tsec6 {
-            padding: 1em;
-            font-size: 1.34em;
-            
-        }
-
-        .masepisodios {
-            font-size: 1.2em;
-        }
-    }
-
-    footer {
-        height: 12vh;
-        font-size: 1.15em;
-
-        .redes {
-            justify-content: space-evenly;
-            width: 25vw;
+                padding: 1.5em 0;
+            }    
         }
     }
 }
-
-

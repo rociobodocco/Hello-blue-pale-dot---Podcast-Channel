@@ -57,6 +57,9 @@ header {
         letter-spacing: 0;
         color: #FFFFFF;
         text-decoration: none; }
+      header nav ul li a:active {
+        text-decoration: line-through;
+        color: #00F3BB; }
 
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
@@ -82,7 +85,13 @@ header {
         padding: 0 1em; }
         header nav ul li a {
           color: #060A24;
-          font-size: 0.9em; } }
+          font-size: 0.9em; }
+        header nav ul li a:hover {
+          text-decoration: line-through;
+          color: #00F3BB; }
+        header nav ul li a:active {
+          text-decoration: line-through;
+          color: #060a248c; } }
 /* Tablets en horizonal y escritorios normales
     ------------------------------------------------------------------------- */
 @media screen and (min-width: 1024px) {
@@ -151,7 +160,7 @@ main .episodios {
   padding: 0.75em;
   clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
   width: 100vw;
-  height: 215vh;
+  height: 240vh;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
   main .episodios .tsec2 {
     margin-top: 3vh;
@@ -162,9 +171,13 @@ main .historia {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 145vh; }
+  height: 160vh; }
   main .historia .phone {
-    z-index: 90; }
+    z-index: 90;
+    transform: translateY(-2vh); }
+    main .historia .phone img {
+      width: auto;
+      height: 111vh; }
   main .historia .artsec3 {
     padding: 0.75em; }
     main .historia .artsec3 h2 {
@@ -174,7 +187,8 @@ main .historia {
       line-height: 4vh; }
 main .invitados {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: max-content; }
   main .invitados .tsec4 {
     padding: 0.75em; }
     main .invitados .tsec4 h2 {
@@ -206,7 +220,8 @@ main .novedades {
   align-items: center;
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  height: 62vh; }
+  height: 62vh;
+  width: 100vw; }
   main .novedades .tsec6 {
     padding: 0.75em; }
     main .novedades .tsec6 h2 {
@@ -257,12 +272,14 @@ footer {
       margin-left: 8em;
       width: 20vw;
       font-size: 1em; }
+    main .conocemas .masinfo:hover {
+      background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
   main .episodios {
     display: flex;
     flex-direction: column;
     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-    height: 140vh;
-    margin-top: 0; }
+    margin-top: 0;
+    height: 170vh; }
     main .episodios .tsec2 {
       margin-left: 7em;
       margin-top: 13vh;
@@ -281,12 +298,12 @@ footer {
     height: 65vh; }
     main .historia .phone {
       position: absolute;
-      top: 190vh;
+      transform: translateY(-20vh);
       margin-right: 50vw;
       align-self: flex-start;
       width: auto; }
       main .historia .phone img {
-        width: 40vw;
+        width: auto;
         height: 95vh; }
     main .historia .artsec3 {
       width: 43vw;
@@ -331,6 +348,8 @@ footer {
       padding: 2em; }
     main .novedades .masepisodios {
       width: 30vw; }
+    main .novedades .masepisodios:hover {
+      background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
 
   footer {
     flex-direction: row;
@@ -362,9 +381,11 @@ footer {
       width: 45vw; }
   main .historia {
     height: 80vh; }
-    main .historia .phone img {
-      width: 35vw;
-      height: 111vh; }
+    main .historia .phone {
+      transform: translateY(5vh); }
+      main .historia .phone img {
+        width: 35vw;
+        height: 111vh; }
     main .historia .artsec3 {
       width: 44vw; }
       main .historia .artsec3 h2 {
@@ -394,43 +415,23 @@ footer {
   ------------------------------------------------------------------------- */
 @media screen and (min-width: 1200px) {
   main .episodios {
-    height: 170vh;
-    align-content: center;
+    height: 180vh;
     clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%); }
-    main .episodios .tsec2 {
-      font-size: 1.34em; }
-    main .episodios .spotify iframe {
-      width: 45vw; }
+    main .episodios .tsec2 h2 {
+      padding: 1.5em 0 0 0; }
   main .historia {
-    height: 80vh; }
-    main .historia .phone img {
-      width: 35vw;
-      height: 111vh; }
-    main .historia .artsec3 {
-      width: 44vw; }
-      main .historia .artsec3 h2 {
-        font-size: 3em; }
-      main .historia .artsec3 p {
-        font-size: 1em; }
-  main .invitados .tsec4 {
-    font-size: 1.34em; }
-  main .temas .tsec5 {
-    font-size: 1.34em; }
-  main .novedades {
-    height: 70vh;
-    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%); }
-  main .tsec6 {
-    padding: 1em;
-    font-size: 1.34em; }
-  main .masepisodios {
-    font-size: 1.2em; }
-
-  footer {
-    height: 12vh;
-    font-size: 1.15em; }
-    footer .redes {
-      justify-content: space-evenly;
-      width: 25vw; } }
+    height: 70vh; }
+    main .historia .phone {
+      top: 215vh; }
+      main .historia .phone img {
+        width: 32vw; }
+  main .invitados .fotos img {
+    width: 33.33vw;
+    height: 54vh; }
+  main .temas {
+    height: 70vh; }
+    main .temas .tsec5 {
+      padding: 1.5em 0; } }
 /* Fuentes ======================================================================= */
 /* Menú y párrafos */
 @font-face {
