@@ -59,15 +59,19 @@ header {
     }
 }
 
-
-/*animaciones*/
-
-
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) { 
     header {
+        height: 12vh;
+        
 
         .logo {
-            margin-left: 4em;
+            margin-left: 5em;
+            
+            .imglogo {
+                width: 3vw;
+            }
         }
 
         nav {
@@ -98,3 +102,44 @@ header {
         }
     }
 } 
+
+/* Tablets en horizonal y escritorios normales
+    ------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 0;
+
+        .imglogo {
+            margin-left: 2em;
+        }
+
+        nav {
+            
+            ul {
+                margin-right: 3em;
+
+                li {
+                    padding: 0 1em;
+                
+                    a {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) { 
+    header {
+
+        nav {
+            
+            ul {
+                margin-right: 5em;
+            }
+        }
+    }
+}
