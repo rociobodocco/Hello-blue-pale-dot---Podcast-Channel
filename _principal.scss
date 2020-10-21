@@ -1,14 +1,19 @@
-
-
-h1, h2 {
+@mixin titulos {
     font-family: $fuente-titulos;
     font-size: 2.25em;
     letter-spacing: 0;
     line-height: 2.625em;
     font-weight: lighter;
+    color: $color-texto;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-name: slidein;
+    -webkit-animation-name: slidein;
+    animation-iteration-count: initial;
+    -webkit-animation-iteration-count: initial;
 }
 
-p {
+@mixin cuerpos {
     font-family: $fuente-myp;
     font-size: 0.875em;
     color: $color-texto;
@@ -16,7 +21,7 @@ p {
     line-height: 1.375em;
 }
 
-figcaption {
+@mixin pieimg {
     font-family: $fuente-pieimg;
     font-size: 1.5em;
     color: $color-texto;
@@ -24,10 +29,35 @@ figcaption {
     text-align: center;
 }
 
+@mixin shadow {
+    -webkit-box-shadow: 0 8px 6px -6px $color-texto;
+    -moz-box-shadow: 0 8px 6px -6px $color-texto;
+    box-shadow: 0 8px 6px -6px $color-texto;
+}
+
+h1, h2 {
+    @include titulos;
+}
+
+p {
+    @include cuerpos;
+}
+
+figcaption {
+    @include pieimg;
+}
+
+a {
+    color: $color-texto;
+    text-decoration: none;
+}
+
 main {
 
     .conocemas {
         display: flex;
+        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
         flex-direction: column;
         justify-content: space-between;
         padding: 0.75em;
@@ -69,27 +99,40 @@ main {
         clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
         width: 100vw;
         height: 240vh;
-        background-image: $color-skew;            
+        background-image: $color-obl;    
 
         .tsec2 {
             margin-top: 3vh;
-            color: $color-contraste;
+            
+
+            h2 {
+                color: $color-contraste;
+            }    
         }
 
         .spotify {
             padding: 0.25em 0;
+
+            iframe {
+                @include shadow;
+            }
         }
     }
 
     .historia {
         display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         flex-direction: column;
         justify-content: flex-end;
         height: 160vh;
 
         .phone {
             z-index: 90;
-            transform: translateY(-2vh);
+            transform: translateY(-2vh); /* IE 10, Fx 16+, Op 12.1+ */
+            -webkit-transform: translateY(-2vh); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: translateY(-2vh); /* IE 9 */
+            
 
             img {
                 width: auto;
@@ -113,6 +156,8 @@ main {
 
     .invitados {
         display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         flex-direction: column;
         height: max-content;
 
@@ -136,8 +181,10 @@ main {
 
     .temas {
         display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: auto;
         padding: 2em 0;
@@ -167,11 +214,13 @@ main {
 
     .novedades {
         display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-        background-image: $color-skew;
+        background-image: $color-obl;
         height: 62vh;
         width: 100vw;
 
@@ -201,6 +250,8 @@ main {
 
 footer {
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -208,8 +259,18 @@ footer {
 
     .redes {
         display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         justify-content: space-around;
         width: 80vw;
+
+        .fab {
+            color:$color-texto;
+        }
+    }
+
+    .fab:active {
+        color: $color-bot-hm;
     }
 }
 
@@ -220,7 +281,7 @@ footer {
     main {
 
         .conocemas {
-            margin-top: 4em;
+            margin-top: 30vh;
             justify-content: space-evenly; 
             padding: 0.75em 0 0 0;
 
@@ -229,7 +290,7 @@ footer {
 
                 h1 {
                     width: 70vw;
-                    font-size: 3em;
+                    font-size: 2.65em;
 
                     .span2 {
                         color: $color-mexp;
@@ -238,7 +299,6 @@ footer {
 
                 p {
                     width: 47vw;
-                    font-size: 0.95em;
                     line-height: 3.5vh;
                 }
             }
@@ -251,11 +311,17 @@ footer {
 
             .masinfo:hover {
                 background: $color-hbot;
+
+                a {
+                    color: $color-contraste;
+                }  
             }
         }
 
         .episodios {
             display: flex;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             flex-direction: column;
             clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
             margin-top: 0;
@@ -264,11 +330,12 @@ footer {
             .tsec2 {
                 margin-left: 7em;
                 margin-top: 13vh;
-                font-size: 1.20em;
+                
             }
 
             .spotify {
                 display: grid;
+                display: -ms-grid; /* IE 10 */
                 grid-template: repeat(2, 1fr) / repeat(2, 1fr);
                 justify-content: center;
                 grid-gap: 3.5em 3.5em;
@@ -287,7 +354,9 @@ footer {
 
             .phone {
                 position: absolute;
-                transform: translateY(-20vh);
+                transform: translateY(-20vh); 
+                -webkit-transform: translateY(-20vh); 
+                -ms-transform: translateY(-20vh); 
                 margin-right: 50vw;
                 align-self: flex-start;
                 width: auto;
@@ -302,11 +371,10 @@ footer {
                 width: 43vw;
                 height: max-content;
                 margin-right: 5vw;
-                padding: 1em 2em;
+                padding: 1em 0;
 
                 h2 {
                     line-height: 12vh;
-                    font-size: 2.25em;
                 }
 
                 p {
@@ -321,7 +389,6 @@ footer {
             .tsec4 {
                 margin-left: 7em;
                 margin-top: 13vh;
-                font-size: 1.20em;
 
                 h2 {
                     padding: 0.6em 0;
@@ -330,6 +397,7 @@ footer {
 
             .fotos {
                 display: grid;
+                display: -ms-grid; /* IE 10 */
                 grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 
                 img {
@@ -340,26 +408,37 @@ footer {
         }
 
         .temas {
-            height: 60vh;
+            height: 85vh;
 
             .tsec5 {
                 align-self: flex-start;
-                padding: 0.5em 0;
-                margin-left: 7em;
+                padding: 1.5em 0;
+                margin-left: 6em;
                 font-size: 1.20em;
             }
 
             .cont-topicos {
                 display: flex;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 width: 85vw;
 
                 .topicos {
                     
+                    img:hover {
+                        transform: scale(1.4);
+                        -webkit-transform: scale(1.4);
+                        -ms-transform: scale(1.4);
+                        @include shadow;
+                    }
+
                     figcaption {
                         width: 19vw;
-                        padding: 0.2em 0;
+                        padding: 1em 0;
                     }
                 }
+
+                
             }
 
         }
@@ -380,6 +459,10 @@ footer {
 
             .masepisodios:hover {
                 background: $color-hbot;
+
+                a {
+                    color: $color-contraste;
+                }    
             }
         }
     }
@@ -394,6 +477,10 @@ footer {
         .redes {
             justify-content: space-evenly;
             width: 30vw;
+        }   
+
+        .fab:hover {
+            color: $color-bot-hm;
         }
     }
 } 
@@ -446,7 +533,10 @@ footer {
             height: 80vh;
 
             .phone {
-                transform: translateY(5vh);
+                transform: translateY(-18vh); 
+                -webkit-transform: translateY(-18vh); 
+                -ms-transform: translateY(-18vh); 
+
                 img {
                     width: 35vw;
                     height: 111vh;
@@ -529,12 +619,24 @@ footer {
             height: 70vh;
 
             .phone {
-                top: 215vh;
+                transform: translateY(-30vh); 
+                -webkit-transform: translateY(-30vh); 
+                -ms-transform: translateY(-30vh); 
 
                 img {
                     width: 32vw;
                 }
             }
+
+            .artsec3 {
+                width: 30vw;
+                margin-right: 15vw;
+                padding: 0;
+
+                h2 {
+                    width: 45vw;
+                }
+            }    
         }
 
         .invitados {
@@ -557,3 +659,15 @@ footer {
         }
     }
 }
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 150%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }

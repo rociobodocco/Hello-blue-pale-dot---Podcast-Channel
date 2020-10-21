@@ -1,13 +1,25 @@
+@mixin shadow {
+    -webkit-box-shadow: 0 8px 6px -6px $color-texto;
+    -moz-box-shadow: 0 8px 6px -6px $color-texto;
+    box-shadow: 0 8px 6px -6px $color-texto;
+}
 
 header {
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 0;
     display: flex;
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     justify-content: space-between;
     align-items: center;
     width: 100vw;
     padding: 0.75em;
+    background-color: $color-contraste;
+    @include shadow;
 
     nav {
-
+        
         input {
             display: none;
             font-size: 1.125em;
@@ -37,15 +49,16 @@ header {
             display: none;
             position: absolute;
             right: 0%;
-            top: 7vh;
+            top: 8vh;
             width: 100vw;
             padding: 0.5em;
-            height: 27vh;
+            height: 30vh;
             background-color: $color-mexp;
 
             li {
                 list-style: none;
                 line-height: 6vh;
+                padding: 0.1em 0;
 
                 a {
                     font-family: $fuente-myp;
@@ -57,7 +70,7 @@ header {
                 
                 a:active {
                     text-decoration: line-through;
-                    color: $color-bot-hm;
+                    color: #060a248c;
                 }
 
             }
@@ -69,8 +82,11 @@ header {
    ------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) { 
     header {
+        position: fixed;
         height: 12vh;
-        
+        top: 0;
+        background-color: $color-contraste;
+        @include shadow;
 
         .logo {
             margin-left: 5em;

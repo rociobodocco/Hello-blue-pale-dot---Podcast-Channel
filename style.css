@@ -20,11 +20,23 @@
 /* Pié de img Temas (figcaption) */
 /* ======================================================================= */
 header {
+  position: sticky;
+  position: -webkit-sticky;
+  /* Safari */
+  top: 0;
   display: flex;
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  padding: 0.75em; }
+  padding: 0.75em;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 8px 6px -6px #060A24;
+  -moz-box-shadow: 0 8px 6px -6px #060A24;
+  box-shadow: 0 8px 6px -6px #060A24; }
   header nav input {
     display: none;
     font-size: 1.125em;
@@ -43,14 +55,15 @@ header {
     display: none;
     position: absolute;
     right: 0%;
-    top: 7vh;
+    top: 8vh;
     width: 100vw;
     padding: 0.5em;
-    height: 27vh;
+    height: 30vh;
     background-color: #0000EC; }
     header nav ul li {
       list-style: none;
-      line-height: 6vh; }
+      line-height: 6vh;
+      padding: 0.1em 0; }
       header nav ul li a {
         font-family: "IBMPlexMono", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
         font-size: 1em;
@@ -59,13 +72,19 @@ header {
         text-decoration: none; }
       header nav ul li a:active {
         text-decoration: line-through;
-        color: #00F3BB; }
+        color: #060a248c; }
 
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) {
   header {
-    height: 12vh; }
+    position: fixed;
+    height: 12vh;
+    top: 0;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 8px 6px -6px #060A24;
+    -moz-box-shadow: 0 8px 6px -6px #060A24;
+    box-shadow: 0 8px 6px -6px #060A24; }
     header .logo {
       margin-left: 5em; }
       header .logo .imglogo {
@@ -115,7 +134,14 @@ h1, h2 {
   font-size: 2.25em;
   letter-spacing: 0;
   line-height: 2.625em;
-  font-weight: lighter; }
+  font-weight: lighter;
+  color: #060A24;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-name: slidein;
+  -webkit-animation-name: slidein;
+  animation-iteration-count: initial;
+  -webkit-animation-iteration-count: initial; }
 
 p {
   font-family: "IBMPlexMono", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -131,8 +157,16 @@ figcaption {
   letter-spacing: 0;
   text-align: center; }
 
+a {
+  color: #060A24;
+  text-decoration: none; }
+
 main .conocemas {
   display: flex;
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   flex-direction: column;
   justify-content: space-between;
   padding: 0.75em;
@@ -163,18 +197,30 @@ main .episodios {
   height: 240vh;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
   main .episodios .tsec2 {
-    margin-top: 3vh;
-    color: #FFFFFF; }
+    margin-top: 3vh; }
+    main .episodios .tsec2 h2 {
+      color: #FFFFFF; }
   main .episodios .spotify {
     padding: 0.25em 0; }
+    main .episodios .spotify iframe {
+      -webkit-box-shadow: 0 8px 6px -6px #060A24;
+      -moz-box-shadow: 0 8px 6px -6px #060A24;
+      box-shadow: 0 8px 6px -6px #060A24; }
 main .historia {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 160vh; }
   main .historia .phone {
     z-index: 90;
-    transform: translateY(-2vh); }
+    transform: translateY(-2vh);
+    /* IE 10, Fx 16+, Op 12.1+ */
+    -webkit-transform: translateY(-2vh);
+    /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+    -ms-transform: translateY(-2vh);
+    /* IE 9 */ }
     main .historia .phone img {
       width: auto;
       height: 111vh; }
@@ -187,6 +233,8 @@ main .historia {
       line-height: 4vh; }
 main .invitados {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-direction: column;
   height: max-content; }
   main .invitados .tsec4 {
@@ -199,8 +247,10 @@ main .invitados {
     width: 100vw; }
 main .temas {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: auto;
   padding: 2em 0; }
@@ -215,6 +265,8 @@ main .temas {
       padding: 0.5em; }
 main .novedades {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -241,32 +293,39 @@ main .novedades {
 
 footer {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 20vh; }
   footer .redes {
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     justify-content: space-around;
     width: 80vw; }
+    footer .redes .fab {
+      color: #060A24; }
+  footer .fab:active {
+    color: #00F3BB; }
 
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) {
   main .conocemas {
-    margin-top: 4em;
+    margin-top: 30vh;
     justify-content: space-evenly;
     padding: 0.75em 0 0 0; }
     main .conocemas .presentacion {
       margin-left: 8em; }
       main .conocemas .presentacion h1 {
         width: 70vw;
-        font-size: 3em; }
+        font-size: 2.65em; }
         main .conocemas .presentacion h1 .span2 {
           color: #0000EC; }
       main .conocemas .presentacion p {
         width: 47vw;
-        font-size: 0.95em;
         line-height: 3.5vh; }
     main .conocemas .masinfo {
       margin-left: 8em;
@@ -274,18 +333,23 @@ footer {
       font-size: 1em; }
     main .conocemas .masinfo:hover {
       background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
+      main .conocemas .masinfo:hover a {
+        color: #FFFFFF; }
   main .episodios {
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-direction: column;
     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
     margin-top: 0;
     height: 170vh; }
     main .episodios .tsec2 {
       margin-left: 7em;
-      margin-top: 13vh;
-      font-size: 1.20em; }
+      margin-top: 13vh; }
     main .episodios .spotify {
       display: grid;
+      display: -ms-grid;
+      /* IE 10 */
       grid-template: repeat(2, 1fr)/repeat(2, 1fr);
       justify-content: center;
       grid-gap: 3.5em 3.5em;
@@ -299,6 +363,8 @@ footer {
     main .historia .phone {
       position: absolute;
       transform: translateY(-20vh);
+      -webkit-transform: translateY(-20vh);
+      -ms-transform: translateY(-20vh);
       margin-right: 50vw;
       align-self: flex-start;
       width: auto; }
@@ -309,38 +375,47 @@ footer {
       width: 43vw;
       height: max-content;
       margin-right: 5vw;
-      padding: 1em 2em; }
+      padding: 1em 0; }
       main .historia .artsec3 h2 {
-        line-height: 12vh;
-        font-size: 2.25em; }
+        line-height: 12vh; }
       main .historia .artsec3 p {
         font-size: 0.80em;
         padding: 0.2em 0; }
   main .invitados .tsec4 {
     margin-left: 7em;
-    margin-top: 13vh;
-    font-size: 1.20em; }
+    margin-top: 13vh; }
     main .invitados .tsec4 h2 {
       padding: 0.6em 0; }
   main .invitados .fotos {
     display: grid;
+    display: -ms-grid;
+    /* IE 10 */
     grid-template: repeat(2, 1fr)/repeat(3, 1fr); }
     main .invitados .fotos img {
       width: 33.33vw;
       height: 46vh; }
   main .temas {
-    height: 60vh; }
+    height: 85vh; }
     main .temas .tsec5 {
       align-self: flex-start;
-      padding: 0.5em 0;
-      margin-left: 7em;
+      padding: 1.5em 0;
+      margin-left: 6em;
       font-size: 1.20em; }
     main .temas .cont-topicos {
       display: flex;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       width: 85vw; }
+      main .temas .cont-topicos .topicos img:hover {
+        transform: scale(1.4);
+        -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+        -webkit-box-shadow: 0 8px 6px -6px #060A24;
+        -moz-box-shadow: 0 8px 6px -6px #060A24;
+        box-shadow: 0 8px 6px -6px #060A24; }
       main .temas .cont-topicos .topicos figcaption {
         width: 19vw;
-        padding: 0.2em 0; }
+        padding: 1em 0; }
   main .novedades {
     justify-content: center;
     clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%); }
@@ -350,6 +425,8 @@ footer {
       width: 30vw; }
     main .novedades .masepisodios:hover {
       background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
+      main .novedades .masepisodios:hover a {
+        color: #FFFFFF; }
 
   footer {
     flex-direction: row;
@@ -359,7 +436,9 @@ footer {
     padding: 0 3em; }
     footer .redes {
       justify-content: space-evenly;
-      width: 30vw; } }
+      width: 30vw; }
+    footer .fab:hover {
+      color: #00F3BB; } }
 /* Tablets en horizonal y escritorios normales
     ------------------------------------------------------------------------- */
 @media screen and (min-width: 1024px) {
@@ -382,7 +461,9 @@ footer {
   main .historia {
     height: 80vh; }
     main .historia .phone {
-      transform: translateY(5vh); }
+      transform: translateY(-18vh);
+      -webkit-transform: translateY(-18vh);
+      -ms-transform: translateY(-18vh); }
       main .historia .phone img {
         width: 35vw;
         height: 111vh; }
@@ -422,9 +503,17 @@ footer {
   main .historia {
     height: 70vh; }
     main .historia .phone {
-      top: 215vh; }
+      transform: translateY(-30vh);
+      -webkit-transform: translateY(-30vh);
+      -ms-transform: translateY(-30vh); }
       main .historia .phone img {
         width: 32vw; }
+    main .historia .artsec3 {
+      width: 30vw;
+      margin-right: 15vw;
+      padding: 0; }
+      main .historia .artsec3 h2 {
+        width: 45vw; }
   main .invitados .fotos img {
     width: 33.33vw;
     height: 54vh; }
@@ -432,6 +521,13 @@ footer {
     height: 70vh; }
     main .temas .tsec5 {
       padding: 1.5em 0; } }
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 150%; }
+  to {
+    margin-left: 0%;
+    width: 100%; } }
 /* Fuentes ======================================================================= */
 /* Menú y párrafos */
 @font-face {
