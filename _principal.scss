@@ -35,7 +35,7 @@
     box-shadow: 0 8px 6px -6px $color-texto;
 }
 
-h1, h2 {
+.titular, h2 {
     @include titulos;
 }
 
@@ -66,7 +66,7 @@ main {
 
         .presentacion {
 
-            h1 {
+            .titular {
                 padding-right: 1em;
                 line-height: 7vh;
 
@@ -288,7 +288,7 @@ footer {
             .presentacion {
                 margin-left: 8em;
 
-                h1 {
+                .titular {
                     width: 70vw;
                     font-size: 2.65em;
 
@@ -311,10 +311,7 @@ footer {
 
             .masinfo:hover {
                 background: $color-hbot;
-
-                a {
-                    color: $color-contraste;
-                }  
+                color: $color-contraste;
             }
         }
 
@@ -459,10 +456,7 @@ footer {
 
             .masepisodios:hover {
                 background: $color-hbot;
-
-                a {
-                    color: $color-contraste;
-                }    
+                color: $color-contraste; 
             }
         }
     }
@@ -496,7 +490,7 @@ footer {
 
             .presentacion {
 
-                h1 {
+                .titular {
                     font-size: 4em;
                 }
 
