@@ -336,8 +336,9 @@ footer {
       width: 20vw;
       font-size: 1em; }
     main .conocemas .masinfo:hover {
-      background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-      color: #FFFFFF; }
+      background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
+      main .conocemas .masinfo:hover a {
+        color: #FFFFFF; }
   main .episodios {
     display: flex;
     display: -ms-flexbox;
@@ -428,8 +429,9 @@ footer {
       width: 35vw;
       font-size: 1em; }
     main .novedades .masepisodios:hover {
-      background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-      color: #FFFFFF; }
+      background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
+      main .novedades .masepisodios:hover a {
+        color: #FFFFFF; }
 
   footer {
     flex-direction: row;

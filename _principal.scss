@@ -311,7 +311,10 @@ footer {
 
             .masinfo:hover {
                 background: $color-hbot;
-                color: $color-contraste;
+                
+                a {
+                    color: $color-contraste;
+                }    
             }
         }
 
@@ -457,7 +460,10 @@ footer {
 
             .masepisodios:hover {
                 background: $color-hbot;
-                color: $color-contraste; 
+                
+                a {
+                    color: $color-contraste;
+                }    
             }
         }
     }
