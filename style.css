@@ -172,12 +172,11 @@ main .conocemas {
   padding: 0.75em;
   width: 100vw;
   height: 46vh; }
-  main .conocemas .presentacion .titular {
-    padding-right: 1em;
+  main .conocemas .titular {
     line-height: 7vh; }
-    main .conocemas .presentacion .titular .span1 {
+    main .conocemas .titular .span1 {
       text-decoration: line-through; }
-  main .conocemas .presentacion p {
+  main .conocemas p {
     padding: 1em 0;
     line-height: 4vh; }
   main .conocemas .masinfo {
@@ -188,6 +187,7 @@ main .conocemas {
     color: #060A24;
     letter-spacing: 0;
     text-align: center;
+    line-height: 8vh;
     border: none; }
 main .episodios {
   margin-top: 3vh;
@@ -203,6 +203,9 @@ main .episodios {
   main .episodios .spotify {
     padding: 0.25em 0; }
     main .episodios .spotify iframe {
+      width: 100%;
+      margin: 0.2em 0 0.2em 0;
+      border: none;
       -webkit-box-shadow: 0 8px 6px -6px #060A24;
       -moz-box-shadow: 0 8px 6px -6px #060A24;
       box-shadow: 0 8px 6px -6px #060A24; }
@@ -289,6 +292,7 @@ main .novedades {
     color: #060A24;
     letter-spacing: 0;
     text-align: center;
+    line-height: 8vh;
     border: none; }
 
 footer {
@@ -317,16 +321,16 @@ footer {
     margin-top: 30vh;
     justify-content: space-evenly;
     padding: 0.75em 0 0 0; }
-    main .conocemas .presentacion {
-      margin-left: 8em; }
-      main .conocemas .presentacion .titular {
-        width: 70vw;
-        font-size: 2.65em; }
-        main .conocemas .presentacion .titular .span2 {
-          color: #0000EC; }
-      main .conocemas .presentacion p {
-        width: 47vw;
-        line-height: 3.5vh; }
+    main .conocemas .titular {
+      padding: 0 3em;
+      width: auto;
+      font-size: 2.65em; }
+      main .conocemas .titular .span2 {
+        color: #0000EC; }
+    main .conocemas p {
+      padding: 0 9.1em;
+      width: 90vw;
+      line-height: 3.5vh; }
     main .conocemas .masinfo {
       margin-left: 8em;
       width: 20vw;
@@ -421,7 +425,8 @@ footer {
     main .novedades .tsec6 {
       padding: 2em; }
     main .novedades .masepisodios {
-      width: 30vw; }
+      width: 35vw;
+      font-size: 1em; }
     main .novedades .masepisodios:hover {
       background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
       color: #FFFFFF; }
@@ -440,13 +445,15 @@ footer {
 /* Tablets en horizonal y escritorios normales
     ------------------------------------------------------------------------- */
 @media screen and (min-width: 1024px) {
-  main .conocemas .presentacion .titular {
+  main .conocemas .titular {
+    padding: 0 2.5em;
     font-size: 4em; }
-  main .conocemas .presentacion p {
-    width: 49vw;
+  main .conocemas p {
+    padding: 0 10.2em;
+    width: 65vw;
     font-size: 1em; }
   main .conocemas .masinfo {
-    margin-left: 7em;
+    margin-left: 9em;
     width: 18.9vw;
     height: 8.35vh;
     font-size: 1.125em; }

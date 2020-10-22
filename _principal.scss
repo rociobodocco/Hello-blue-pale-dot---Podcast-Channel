@@ -64,23 +64,19 @@ main {
         width: 100vw;
         height: 46vh;
 
-        .presentacion {
+        .titular {
+            line-height: 7vh;
 
-            .titular {
-                padding-right: 1em;
-                line-height: 7vh;
-
-                .span1 {
-                    text-decoration: line-through;
-                }
-            }
-
-            p {
-                padding: 1em 0;
-                line-height: 4vh;
+            .span1 {
+                text-decoration: line-through;
             }
         }
 
+        p {
+            padding: 1em 0;
+            line-height: 4vh;
+        }
+        
         .masinfo {
             height: 8vh;
             background-color: $color-bot-hm;
@@ -89,6 +85,7 @@ main {
             color: $color-texto;
             letter-spacing: 0;
             text-align: center;
+            line-height: 8vh;
             border: none;
         }
     }
@@ -114,6 +111,9 @@ main {
             padding: 0.25em 0;
 
             iframe {
+                width: 100%;
+                margin: 0.2em 0 0.2em 0;
+                border: none;
                 @include shadow;
             }
         }
@@ -243,6 +243,7 @@ main {
             color: $color-texto;
             letter-spacing: 0;
             text-align: center;
+            line-height: 8vh;
             border: none;
         }
     }
@@ -285,23 +286,22 @@ footer {
             justify-content: space-evenly; 
             padding: 0.75em 0 0 0;
 
-            .presentacion {
-                margin-left: 8em;
+            .titular {
+                padding: 0 3em;
+                width: auto;
+                font-size: 2.65em;
 
-                .titular {
-                    width: 70vw;
-                    font-size: 2.65em;
-
-                    .span2 {
-                        color: $color-mexp;
-                    }
-                }
-
-                p {
-                    width: 47vw;
-                    line-height: 3.5vh;
+                .span2 {
+                    color: $color-mexp;
                 }
             }
+
+            p {
+                padding: 0 9.1em;
+                width: 90vw;
+                line-height: 3.5vh;
+            }
+            
 
             .masinfo {
                 margin-left: 8em;
@@ -451,7 +451,8 @@ footer {
             }
 
             .masepisodios {
-                width: 30vw;
+                width: 35vw;
+                font-size: 1em;
             }
 
             .masepisodios:hover {
@@ -488,20 +489,20 @@ footer {
 
         .conocemas {
 
-            .presentacion {
-
-                .titular {
-                    font-size: 4em;
-                }
-
-                p {
-                    width: 49vw;
-                    font-size: 1em;
-                }
+            .titular {
+                padding: 0 2.5em;
+                font-size: 4em;
             }
 
+            p {
+                padding: 0 10.2em;
+                width: 65vw;
+                font-size: 1em;
+            }
+            
+
             .masinfo {
-                margin-left: 7em;
+                margin-left: 9em;
                 width: 18.9vw;
                 height: 8.35vh;
                 font-size: 1.125em;
