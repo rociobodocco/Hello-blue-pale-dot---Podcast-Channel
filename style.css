@@ -208,6 +208,10 @@ main {
     margin-top: 3vh;
     padding: 0.75em;
     clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    -webkit-clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    -moz-clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    -ms-clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    -o-clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
     width: 100vw;
     height: 240vh;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
@@ -289,6 +293,10 @@ main {
     justify-content: space-evenly;
     align-items: center;
     clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    -moz-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    -ms-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    -o-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     height: 62vh;
     width: 100vw; }
@@ -361,6 +369,10 @@ footer {
     display: -webkit-flex;
     flex-direction: column;
     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    -moz-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    -ms-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    -o-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
     margin-top: 0;
     height: 170vh; }
     main .episodios .tsec2 {
@@ -486,7 +498,11 @@ footer {
         padding: 1em 0; }
   main .novedades {
     justify-content: center;
-    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%); }
+    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+    -moz-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+    -ms-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+    -o-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%); }
     main .novedades .tsec6 {
       padding: 2em; }
     main .novedades .masepisodios {
@@ -549,8 +565,7 @@ footer {
   main .temas .tsec5 {
     font-size: 1.34em; }
   main .novedades {
-    height: 70vh;
-    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%); }
+    height: 70vh; }
   main .tsec6 {
     padding: 1em;
     font-size: 1.34em; }
@@ -568,7 +583,11 @@ footer {
 @media screen and (min-width: 1200px) {
   main .episodios {
     height: 180vh;
-    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%); }
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    -moz-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    -ms-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    -o-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%); }
     main .episodios .tsec2 h2 {
       padding: 1.5em 0 0 0; }
   main .historia {
