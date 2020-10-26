@@ -4,6 +4,8 @@
     box-shadow: 0 8px 6px -6px $color-texto;
 }
 
+/* Cabecera con logo y menú navegación */
+
 header {
     position: sticky;
     position: -webkit-sticky; /* Safari */
@@ -17,6 +19,7 @@ header {
     padding: 0.75em;
     background-color: $color-contraste;
     @include shadow;
+    z-index: 100;
 
     nav {
         

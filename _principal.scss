@@ -53,8 +53,11 @@ a {
     text-decoration: none;
 }
 
-main {
 
+/* Cuerpo principal de pág. */
+
+main {
+    /* 1º sección */
     .conocemas {
         display: flex;
         display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -82,7 +85,7 @@ main {
             height: 8vh;
             background-color: $color-bot-hm;
             font-family: IBMPlexMono-Medium;
-            font-size: 1.125em;
+            font-size: 1em;
             color: $color-texto;
             letter-spacing: 0;
             text-align: center;
@@ -91,6 +94,7 @@ main {
         }
     }
 
+    /* 2º sección */
     .episodios {
         margin-top: 3vh;
         padding: 0.75em;
@@ -120,6 +124,7 @@ main {
         }
     }
 
+    /* 3º sección */
     .historia {
         display: flex;
         display: -ms-flexbox;
@@ -130,9 +135,9 @@ main {
 
         .phone {
             z-index: 90;
-            transform: translateY(-2vh); /* IE 10, Fx 16+, Op 12.1+ */
-            -webkit-transform: translateY(-2vh); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-            -ms-transform: translateY(-2vh); /* IE 9 */
+            transform: translateY(1vh); /* IE 10, Fx 16+, Op 12.1+ */
+            -webkit-transform: translateY(1vh); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: translateY(1vh); /* IE 9 */
             
 
             img {
@@ -155,6 +160,7 @@ main {
         }
     }
 
+    /* 4º sección */
     .invitados {
         display: flex;
         display: -ms-flexbox;
@@ -179,7 +185,8 @@ main {
             }     
         }      
     }
-
+    
+    /* 5º sección */
     .temas {
         display: flex;
         display: -ms-flexbox;
@@ -213,6 +220,7 @@ main {
         
     }
 
+    /* 6º sección */
     .novedades {
         display: flex;
         display: -ms-flexbox;
@@ -240,7 +248,7 @@ main {
             width: 90vw;
             background-color: $color-bot-hm;
             font-family: IBMPlexMono-Medium;
-            font-size: 1.125em;
+            font-size: 1em;
             color: $color-texto;
             letter-spacing: 0;
             text-align: center;
@@ -250,6 +258,7 @@ main {
     }
 }
 
+/* Pié de pág con redes */
 footer {
     display: flex;
     display: -ms-flexbox;

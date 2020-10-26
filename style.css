@@ -23,6 +23,7 @@
 /* Títulos (h1) */
 /* Pié de img Temas (figcaption) */
 /* ======================================================================= */
+/* Cabecera con logo y menú navegación */
 header {
   position: sticky;
   position: -webkit-sticky;
@@ -40,7 +41,8 @@ header {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0 8px 6px -6px #060A24;
   -moz-box-shadow: 0 8px 6px -6px #060A24;
-  box-shadow: 0 8px 6px -6px #060A24; }
+  box-shadow: 0 8px 6px -6px #060A24;
+  z-index: 100; }
   header nav input {
     display: none;
     font-size: 1.125em;
@@ -166,140 +168,149 @@ a {
   color: #060A24;
   text-decoration: none; }
 
-main .conocemas {
-  display: flex;
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.75em;
-  width: 100vw;
-  height: 46vh; }
-  main .conocemas .titular {
-    line-height: 7vh; }
-    main .conocemas .titular .span1 {
-      text-decoration: line-through; }
-  main .conocemas p {
-    padding: 1em 0;
-    line-height: 4vh; }
-  main .conocemas .masinfo {
-    height: 8vh;
-    background-color: #00F3BB;
-    font-family: IBMPlexMono-Medium;
-    font-size: 1.125em;
-    color: #060A24;
-    letter-spacing: 0;
-    text-align: center;
-    line-height: 8vh;
-    border: none; }
-main .episodios {
-  margin-top: 3vh;
-  padding: 0.75em;
-  clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
-  width: 100vw;
-  height: 240vh;
-  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
-  main .episodios .tsec2 {
-    margin-top: 3vh; }
-    main .episodios .tsec2 h2 {
-      color: #FFFFFF; }
-  main .episodios .spotify {
-    padding: 0.25em 0; }
-    main .episodios .spotify iframe {
-      width: 100%;
-      margin: 0.2em 0 0.2em 0;
-      border: none;
-      -webkit-box-shadow: 0 8px 6px -6px #060A24;
-      -moz-box-shadow: 0 8px 6px -6px #060A24;
-      box-shadow: 0 8px 6px -6px #060A24; }
-main .historia {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 160vh; }
-  main .historia .phone {
-    z-index: 90;
-    transform: translateY(-2vh);
-    /* IE 10, Fx 16+, Op 12.1+ */
-    -webkit-transform: translateY(-2vh);
-    /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-    -ms-transform: translateY(-2vh);
-    /* IE 9 */ }
-    main .historia .phone img {
-      width: auto;
-      height: 111vh; }
-  main .historia .artsec3 {
-    padding: 0.75em; }
-    main .historia .artsec3 h2 {
+/* Cuerpo principal de pág. */
+main {
+  /* 1º sección */
+  /* 2º sección */
+  /* 3º sección */
+  /* 4º sección */
+  /* 5º sección */
+  /* 6º sección */ }
+  main .conocemas {
+    display: flex;
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75em;
+    width: 100vw;
+    height: 46vh; }
+    main .conocemas .titular {
       line-height: 7vh; }
-    main .historia .artsec3 p {
-      padding: 0.5em 0;
+      main .conocemas .titular .span1 {
+        text-decoration: line-through; }
+    main .conocemas p {
+      padding: 1em 0;
       line-height: 4vh; }
-main .invitados {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  flex-direction: column;
-  height: max-content; }
-  main .invitados .tsec4 {
-    padding: 0.75em; }
-    main .invitados .tsec4 h2 {
-      padding: 0.5em 0 0 0;
-      line-height: 7vh; }
-  main .invitados .fotos img {
-    display: block;
-    width: 100vw; }
-main .temas {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 2em 0; }
-  main .temas .tsec5 {
-    padding: 0.5em 0.75em; }
-    main .temas .tsec5 h2 {
-      line-height: 7vh; }
-  main .temas .cont-topicos .topicos {
-    text-align: center;
-    padding: 1.5em 1em; }
-    main .temas .cont-topicos .topicos figcaption {
-      padding: 0.5em; }
-main .novedades {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  height: 62vh;
-  width: 100vw; }
-  main .novedades .tsec6 {
-    padding: 0.75em; }
-    main .novedades .tsec6 h2 {
-      line-height: 7vh;
+    main .conocemas .masinfo {
+      height: 8vh;
+      background-color: #00F3BB;
+      font-family: IBMPlexMono-Medium;
+      font-size: 1em;
+      color: #060A24;
+      letter-spacing: 0;
       text-align: center;
-      color: #FFFFFF; }
-  main .novedades .masepisodios {
-    height: 8vh;
-    width: 90vw;
-    background-color: #00F3BB;
-    font-family: IBMPlexMono-Medium;
-    font-size: 1.125em;
-    color: #060A24;
-    letter-spacing: 0;
-    text-align: center;
-    line-height: 8vh;
-    border: none; }
+      line-height: 8vh;
+      border: none; }
+  main .episodios {
+    margin-top: 3vh;
+    padding: 0.75em;
+    clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    width: 100vw;
+    height: 240vh;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
+    main .episodios .tsec2 {
+      margin-top: 3vh; }
+      main .episodios .tsec2 h2 {
+        color: #FFFFFF; }
+    main .episodios .spotify {
+      padding: 0.25em 0; }
+      main .episodios .spotify iframe {
+        width: 100%;
+        margin: 0.2em 0 0.2em 0;
+        border: none;
+        -webkit-box-shadow: 0 8px 6px -6px #060A24;
+        -moz-box-shadow: 0 8px 6px -6px #060A24;
+        box-shadow: 0 8px 6px -6px #060A24; }
+  main .historia {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 160vh; }
+    main .historia .phone {
+      z-index: 90;
+      transform: translateY(1vh);
+      /* IE 10, Fx 16+, Op 12.1+ */
+      -webkit-transform: translateY(1vh);
+      /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: translateY(1vh);
+      /* IE 9 */ }
+      main .historia .phone img {
+        width: auto;
+        height: 111vh; }
+    main .historia .artsec3 {
+      padding: 0.75em; }
+      main .historia .artsec3 h2 {
+        line-height: 7vh; }
+      main .historia .artsec3 p {
+        padding: 0.5em 0;
+        line-height: 4vh; }
+  main .invitados {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    height: max-content; }
+    main .invitados .tsec4 {
+      padding: 0.75em; }
+      main .invitados .tsec4 h2 {
+        padding: 0.5em 0 0 0;
+        line-height: 7vh; }
+    main .invitados .fotos img {
+      display: block;
+      width: 100vw; }
+  main .temas {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2em 0; }
+    main .temas .tsec5 {
+      padding: 0.5em 0.75em; }
+      main .temas .tsec5 h2 {
+        line-height: 7vh; }
+    main .temas .cont-topicos .topicos {
+      text-align: center;
+      padding: 1.5em 1em; }
+      main .temas .cont-topicos .topicos figcaption {
+        padding: 0.5em; }
+  main .novedades {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    height: 62vh;
+    width: 100vw; }
+    main .novedades .tsec6 {
+      padding: 0.75em; }
+      main .novedades .tsec6 h2 {
+        line-height: 7vh;
+        text-align: center;
+        color: #FFFFFF; }
+    main .novedades .masepisodios {
+      height: 8vh;
+      width: 90vw;
+      background-color: #00F3BB;
+      font-family: IBMPlexMono-Medium;
+      font-size: 1em;
+      color: #060A24;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 8vh;
+      border: none; }
 
+/* Pié de pág con redes */
 footer {
   display: flex;
   display: -ms-flexbox;
